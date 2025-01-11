@@ -20,4 +20,3 @@ export async function login(user) {
 
   return json;
 }
-
