@@ -20,3 +20,5 @@ export async function login(user) {
 
   return json;
 }
+// Adding a test comment to test lint-staged
+console.log("This is a test line"); // Endret for å teste
