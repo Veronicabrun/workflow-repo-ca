@@ -6,14 +6,16 @@ export default [
   {
     languageOptions: {
       globals: {
-        ...globals.browser, // For nettlesermiljøet
-        describe: true, // For testgruppering
-        test: true, // For å opprette tester
-        it: true, // Alternativ for å lage tester
+        ...globals.browser, //  For the browser environment
+        describe: true, // For test grouping
+        test: true, // For creating tests
+        it: true, // Alternative for creating tests
         expect: true, // For testpåstander
-        require: true, // For Node.js-moduler som Tailwind-konfig
-        module: true, // For Node.js-moduler som Tailwind-konfig
-        process: true, // For miljøvariabler
+        require: true, // For Node.js modules like Tailwind config
+        module: true, // For Node.js modules like the Tailwind config
+        process: true, // For environment variables
+        vi: true,         //  Vitest's mock function
+        global: true,     // Node's global object 
       },
     },
   },
