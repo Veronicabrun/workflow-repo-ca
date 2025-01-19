@@ -9,5 +9,6 @@ export default defineConfig({
 
   test: {
     environment: "jsdom", // Setter opp et falskt nettlesermiljø for testene dine
+    exclude: ["**/node_modules/**", "**/tests/e2e/**", "**/tests-examples/**"], // Ekskluder Playwright-testene
   },
 });
