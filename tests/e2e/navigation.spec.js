@@ -1,27 +1,23 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Navigation", () => {
-  test("User can navigate to a venue", async ({ page }) => {
-    console.log("🟢 Starter navigasjonstesten...");
-
-    // 1️⃣ **Gå til hjemmesiden**
+test.describe("Venue Navigation", () => {
+  test("User can view venue details", async ({ page }) => {
+    // Naviger til startsiden
     await page.goto("/");
 
-    // 2️⃣ **Vent en kort tid først (hjelper med timing-problemer)**
-    await page.waitForTimeout(3000);
+    // Vent på at venue-listen lastes inn
+    const venueContainer = page.locator("#venue-container");
+    await expect(venueContainer).not.toHaveText("Loading...");
 
-    // 3️⃣ **Vent til venue-listen er lastet inn**
-    await page.waitForSelector(".venue-item", { timeout: 15000 });
+    // Vent på at minst ett venue vises
+    const firstVenue = venueContainer.locator(":scope > *").first();
+    await expect(firstVenue).toBeVisible();
 
-    console.log("✅ Venue-listen er lastet inn!");
-
-    // 4️⃣ **Klikk på første venue**
-    const firstVenue = page.locator(".venue-item").first();
+    // Klikk på første venue
     await firstVenue.click();
-    console.log("✅ Klikket på første venue!");
 
-    // 5️⃣ **Sjekk at venue-detaljsiden vises**
-    await expect(page.locator("h1")).toContainText("Venue details");
-    console.log("✅ Navigasjon til Venue Details er vellykket!");
+    // Verifiser at "Venue details" vises i overskriften
+    const heading = page.locator("h1");
+    await expect(heading).toContainText("Venue details");
   });
 });

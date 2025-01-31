@@ -14,8 +14,8 @@ export default [
         require: true, // For Node.js modules like Tailwind config
         module: true, // For Node.js modules like the Tailwind config
         process: true, // For environment variables
-        vi: true,         //  Vitest's mock function
-        global: true,     // Node's global object 
+        vi: true, //  Vitest's mock function
+        global: true, // Node's global object
       },
     },
   },
