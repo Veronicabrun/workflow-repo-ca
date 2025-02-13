@@ -1,24 +1,28 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, test } from "vitest";
 import { isActivePath } from "../../js/utils/userInterface.js";
 
 describe("isActivePath", () => {
-  it("should return true when the current path matches href exactly", () => {
-    expect(isActivePath("/about", "/about")).toBe(true);
+  test("Returns true when currentPath matches href exactly", () => {
+    const href = "/about";
+    const currentPath = "/about";
+    expect(isActivePath(href, currentPath)).toBe(true);
   });
 
-  it('should return true for root path ("/") when path is "/"', () => {
+  test("Returns true for root path ('/') when path is '/' or '/index.html'", () => {
     expect(isActivePath("/", "/")).toBe(true);
-  });
-
-  it('should return true for root path ("/") when path is "/index.html"', () => {
     expect(isActivePath("/", "/index.html")).toBe(true);
   });
 
-  it("should return true when the current path includes the href", () => {
-    expect(isActivePath("/dashboard", "/dashboard/settings")).toBe(true);
+  test("Returns true when currentPath includes href", () => {
+    const href = "/dashboard";
+    const currentPath = "/dashboard/settings";
+    expect(isActivePath(href, currentPath)).toBe(true);
   });
 
-  it("should return false when paths don’t match", () => {
-    expect(isActivePath("/about", "/contact")).toBe(false);
+  test("Returns false when paths don't match", () => {
+    const href = "/about";
+    const currentPath = "/contact";
+    expect(isActivePath(href, currentPath)).toBe(false);
   });
 });
+
