@@ -2,21 +2,21 @@ import { test, expect } from "@playwright/test";
 
 test.describe("Venue Navigation", () => {
   test("User can view venue details", async ({ page }) => {
-    // Naviger til startsiden
+    // Navigate to the home page
     await page.goto("/");
 
-    // Vent på at venue-listen lastes inn
+    // Wait for the venue list to load
     const venueContainer = page.locator("#venue-container");
     await expect(venueContainer).not.toHaveText("Loading...");
 
-    // Vent på at minst ett venue vises
+    // Wait for at least one venue to appear
     const firstVenue = venueContainer.locator(":scope > *").first();
     await expect(firstVenue).toBeVisible();
 
-    // Klikk på første venue
+    // Click on the first venue
     await firstVenue.click();
 
-    // Verifiser at "Venue details" vises i overskriften
+    // Verify that "Venue details" appears in the header
     const heading = page.locator("h1");
     await expect(heading).toContainText("Venue details");
   });

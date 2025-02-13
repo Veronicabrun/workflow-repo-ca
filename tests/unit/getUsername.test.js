@@ -3,20 +3,20 @@ import { getUsername, saveUser, clearStorage } from "../../js/utils/storage.js";
 
 describe("getUsername", () => {
   beforeEach(() => {
-    clearStorage(); // Rens localStorage før hver test
+    clearStorage(); 
   });
 
   afterEach(() => {
-    clearStorage(); // Rens localStorage etter hver test
+    clearStorage(); 
   });
 
   it("should return the username from localStorage", () => {
     const user = { name: "TestUser" };
-    saveUser(user); // Lagre bruker
-    expect(getUsername()).toBe("TestUser"); // Forvent at vi får riktig navn tilbake
+    saveUser(user); 
+    expect(getUsername()).toBe("TestUser"); // Expect us to get the correct name back
   });
 
   it("should return null when no user is in storage", () => {
-    expect(getUsername()).toBeNull(); // Skal være `null` hvis ingen bruker er lagret
+    expect(getUsername()).toBeNull(); // Should be `null' if no user is saved
   });
 });
