@@ -32,7 +32,6 @@ Clone this repository and install the necessary dependencies:
 git clone https://github.com/Veronicabrun/workflow-repo-ca.git
 cd workflow-repo-ca
 npm install
-
 ```
 
 ## Scripts
