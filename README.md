@@ -15,13 +15,12 @@ This setup ensures efficient development, testing, and debugging of applications
 ---
 
 ##  Getting Started  
-
-### ** Prerequisites**  
+ Prerequisites  
 Ensure you have the following installed:  
 - **[Node.js](https://nodejs.org/)** (latest stable version)  
 - **[npm](https://www.npmjs.com/)**  
 
-### ** Installation**  
+### Installation  
 Clone this repository and install the necessary dependencies:
 
 ```sh
@@ -47,6 +46,7 @@ Watch TailwindCSS for real-time styling updates:
 npm run dev
 
 ## Testing
+
 Run all tests:
 npm run test
 
@@ -70,6 +70,7 @@ Generate and view test reports:
 npm run e2e:report
 
 # Pre-commit Hooks
+
 This project includes Husky and Lint-Staged to enforce best practices before commits.
 
 To lint the code:
