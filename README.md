@@ -37,39 +37,43 @@ npm install
 
 ## Scripts
 
-Start Live Server: Runs a development server to preview your app.
+Start a local development server:
 ```
-npm start
+npm run start
 ```
 
-Watch TailwindCSS: Compiles your TailwindCSS styles in real-time.
+Watch TailwindCSS for real-time styling updates:
 ```
 npm run dev
 ```
 
 ### Testing
 
-Run Unit Tests: Execute all Vitest unit tests.
+Run all tests:
 ```
-npm test
+npm run test
+```
+Unit Testing (Vitest)
+```
+npm run test:unit
 ```
 
 Run E2E Tests: Use Playwright for end-to-end testing.
 ```
-npm run e2e
+npm run test:e2e
 ```
 
-Interactive E2E UI: Launch the Playwright test runner UI for easier debugging.
+Run Playwright tests in UI mode for debugging:
 ```
 npm run e2e:ui
 ```
 
-Headed Mode: Run Playwright tests with a visible browser window.
+Run Playwright tests in headed mode (with a visible browser):
 ```
 npm run e2e:headed
 ```
 
-Debug Mode: Run Playwright tests in debug mode.
+Run Playwright tests in debug mode:
 ```
 npm run e2e:debug
 ```
