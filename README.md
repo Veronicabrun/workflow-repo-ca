@@ -28,11 +28,12 @@ Ensure you have the following installed:
 
 Clone this repository and install the necessary dependencies:  
 
-```sh
+```
 git clone https://github.com/Veronicabrun/workflow-repo-ca.git
 cd workflow-repo-ca
 npm install
 
+```
 
 ## Scripts
 ### Development
