@@ -83,9 +83,6 @@ npm run e2e:debug
 This project uses Husky and Lint-Staged to ensure code quality:
 Automatically formats and lints JavaScript and HTML files before committing.
 
-## Environment Variables
-The project uses environment variables to store sensitive information like test credentials. Create a .env file in the root directory and add the required keys:
-
 To lint the code:
 ```
 npm run lint
@@ -98,6 +95,9 @@ To set up pre-commit hooks:
 ```
 npm run prepare
 ```
+
+## Environment Variables
+The project uses environment variables to store sensitive information like test credentials. Create a .env file in the root directory and add the required keys:
 
 ```env
 TEST_USER_EMAIL=your-email@example.com
