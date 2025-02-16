@@ -36,6 +36,7 @@ npm install
 ```
 
 ## Scripts
+### Development
 
 Start a local development server:
 ```
@@ -103,4 +104,3 @@ TEST_USER_EMAIL=your-email@example.com
 TEST_USER_PASSWORD=your-password
 ```
 
-### Development
