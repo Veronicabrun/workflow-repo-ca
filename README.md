@@ -5,7 +5,7 @@ This setup ensures efficient development, testing, and debugging of applications
 
 ---
 
-## 🔥 Features  
+##  Features  
 
 - **Live Development Server** – Preview changes in real-time with `live-server`.  
 - **TailwindCSS Integration** – Quickly style applications with utility-based CSS.  
@@ -15,16 +15,16 @@ This setup ensures efficient development, testing, and debugging of applications
 
 ---
 
-## 🚀 Getting Started  
+##  Getting Started  
 
-### 📌 Prerequisites  
+###  Prerequisites  
 
 Ensure you have the following installed:  
 
 - **[Node.js](https://nodejs.org/)** (latest stable version)  
 - **[npm](https://www.npmjs.com/)**  
 
-### 💾 Installation  
+###  Installation  
 
 Clone this repository and install the necessary dependencies:  
 
@@ -84,6 +84,19 @@ Automatically formats and lints JavaScript and HTML files before committing.
 
 ## Environment Variables
 The project uses environment variables to store sensitive information like test credentials. Create a .env file in the root directory and add the required keys:
+
+To lint the code:
+```
+npm run lint
+```
+To format the code with Prettier:
+```
+npm run format
+```
+To set up pre-commit hooks:
+```
+npm run prepare
+```
 
 ```env
 TEST_USER_EMAIL=your-email@example.com
