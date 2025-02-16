@@ -21,65 +21,101 @@ Ensure you have the following installed:
 - **[npm](https://www.npmjs.com/)**  
 
 ### Installation  
-Clone this repository and install the necessary dependencies:
 
-```sh
-git clone https://github.com/Veronicabrun/workflow-repo-ca.git
-cd workflow-repo-ca
-npm install
-
-## Environment Variables
+ Environment Variables
 This project requires environment variables for authentication and testing.
+
 Create a .env file in the root directory and add the following keys:
 
+sh
+Kopier
+Rediger
 TEST_USER_EMAIL=your-email@example.com
 TEST_USER_PASSWORD=your-password
+🚨 Do not commit .env to GitHub! The file is already added to .gitignore.
 
-# Scripts
+A .env.example file is included as a template:
 
-## Development
-
+sh
+Kopier
+Rediger
+TEST_USER_EMAIL=
+TEST_USER_PASSWORD=
+🛠️ Available Scripts
+🔧 Development
 Start a local development server:
+
+sh
+Kopier
+Rediger
 npm run start
-
 Watch TailwindCSS for real-time styling updates:
+
+sh
+Kopier
+Rediger
 npm run dev
-
-## Testing
-
+🧪 Testing
 Run all tests:
+
+sh
+Kopier
+Rediger
 npm run test
-
-Unit Testing (Vitest)
+✅ Unit Testing (Vitest)
+sh
+Kopier
+Rediger
 npm run test:unit
-
-End-to-End Testing (Playwright)
+🎭 End-to-End Testing (Playwright)
 Run Playwright E2E tests:
+
+sh
+Kopier
+Rediger
 npm run test:e2e
-
 Run Playwright tests in UI mode for debugging:
+
+sh
+Kopier
+Rediger
 npm run e2e:ui
-
 Run Playwright tests in debug mode:
+
+sh
+Kopier
+Rediger
 npm run e2e:debug
-
 Run Playwright tests in headed mode (with a visible browser):
+
+sh
+Kopier
+Rediger
 npm run e2e:headed
-
 Generate and view test reports:
+
+sh
+Kopier
+Rediger
 npm run e2e:report
-
-# Pre-commit Hooks
-
+📝 Code Quality & Pre-commit Hooks
 This project includes Husky and Lint-Staged to enforce best practices before commits.
 
 To lint the code:
+
+sh
+Kopier
+Rediger
 npm run lint
-
 To format the code with Prettier:
+
+sh
+Kopier
+Rediger
 npm run format
-
 To set up pre-commit hooks:
+
+sh
+Kopier
+Rediger
 npm run prepare
-
-
